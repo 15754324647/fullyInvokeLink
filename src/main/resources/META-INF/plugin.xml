@@ -24,7 +24,15 @@
 
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
-    <extensions defaultExtensionNs="com.intellij">
+<!--    <extensions defaultExtensionNs="com.intellij">-->
 
-    </extensions>
+<!--    </extensions>-->
+
+    <!-- Action 扩展点声明 -->
+    <actions>
+        <action id="com.plugin.showCall" class="com.plugin.fullyInvokeLink.actions.ShowCallHierarchyAction"
+                text="ShowCallHierarchyAction">
+            <add-to-group group-id="GenerateGroup" anchor="first"/>
+        </action>
+    </actions>
 </idea-plugin>
